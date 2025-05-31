@@ -1,6 +1,26 @@
 :root {
   --background-color: oklch(27.4% 0.006 286.033);
   --text-color: oklch(98.5% 0 0);
+  --border-color: oklch(37% 0.013 285.805);
+  --outline-color: oklch(98.5% 0 0);
+  --scrollbar-color: oklch(37% 0.013 285.805);
+}
+
+html {
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color);
+  border-radius: 3px;
 }
 
 * {
@@ -19,6 +39,20 @@ html {
 body {
   background: var(--background-color);
   color: var(--text-color);
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-inner-outer-button {
+  appearance: none;
+}
+
+input,
+button,
+select {
+  font: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  letter-spacing: inherit;
 }
 
 #application {
