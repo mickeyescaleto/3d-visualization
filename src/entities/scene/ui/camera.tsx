@@ -1,8 +1,18 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { CameraControls } from '@react-three/drei';
+
+import { useScene } from '../hooks/use-scene';
 
 export function Camera() {
   const camera = useRef<CameraControls>(null);
+
+  const { target } = useScene();
+
+  useEffect(() => {
+    if (camera.current) {
+      camera.current.setTarget(...target, true);
+    }
+  }, [target]);
 
   return (
     <CameraControls
