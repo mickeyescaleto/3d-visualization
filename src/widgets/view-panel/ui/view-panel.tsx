@@ -1,0 +1,15 @@
+import { Canvas } from '@react-three/fiber';
+
+import styles from './view-panel.module.css';
+import { Ground, Camera } from '@/entities/scene';
+
+export function ViewPanel() {
+  return (
+    <section className={styles.viewer}>
+      <Canvas camera={{ position: [10, 10, 10], fov: 60 }}>
+        <Ground />
+        <Camera />
+      </Canvas>
+    </section>
+  );
+}
