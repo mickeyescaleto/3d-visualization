@@ -11,6 +11,7 @@
     "lint": "eslint --fix '**/*.{js,ts,jsx,tsx,cjs,mjs}'"
   },
   "dependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.2.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
