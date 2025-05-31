@@ -11,10 +11,12 @@
     "lint": "eslint --fix '**/*.{js,ts,jsx,tsx,cjs,mjs}'"
   },
   "dependencies": {
-    "3d-visualization": ".",
     "@fontsource-variable/jetbrains-mono": "^5.2.5",
+    "@headlessui/react": "^2.2.4",
     "@react-three/drei": "^10.1.2",
     "@react-three/fiber": "^9.1.2",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.511.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "three": "^0.177.0"

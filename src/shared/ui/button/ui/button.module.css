@@ -1,0 +1,89 @@
+:root {
+  --button-outline-background-hovered-color: oklch(37% 0.013 285.805);
+  --button-outline-text-color: oklch(98.5% 0 0);
+  --button-danger-background-hovered-color: oklch(58.6% 0.253 17.585);
+  --button-danger-text-hovered-color: oklch(98.5% 0 0);
+  --button-danger-border-color: oklch(58.6% 0.253 17.585);
+  --button-danger-text-color: oklch(58.6% 0.253 17.585);
+  --button-danger-outline-color: oklch(58.6% 0.253 17.585);
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  appearance: button;
+  font: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  letter-spacing: inherit;
+  outline-style: none;
+  border: 1px solid transparent;
+
+  &[data-focus] {
+    outline: 1px solid var(--outline-color);
+  }
+}
+
+.outline {
+  background: transparent;
+  color: var(--button-outline-text-color);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  transition: background 0.25s;
+
+  &[data-hover] {
+    background: var(--button-outline-background-hovered-color);
+  }
+
+  &[data-open] {
+    background: var(--button-outline-background-hovered-color);
+  }
+
+  &[data-focus] {
+    outline: 1px solid var(--outline-color);
+  }
+
+  &[data-active] {
+    box-shadow:
+      0 2px 3px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgb(0, 0, 0, 0.2);
+  }
+}
+
+.danger {
+  background: transparent;
+  color: var(--button-danger-text-color);
+  border: 1px solid var(--button-danger-border-color);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  transition:
+    background 0.25s,
+    color 0.25s;
+
+  &[data-hover] {
+    background: var(--button-danger-background-hovered-color);
+    color: var(--button-danger-text-hovered-color);
+  }
+
+  &[data-open] {
+    background: var(--button-danger-background-hovered-color);
+    color: var(--button-danger-text-hovered-color);
+  }
+
+  &[data-focus] {
+    outline: 1px solid var(--button-danger-outline-color);
+  }
+
+  &[data-active] {
+    box-shadow:
+      0 2px 3px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgb(0, 0, 0, 0.2);
+  }
+}

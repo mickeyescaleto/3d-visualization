@@ -1,0 +1,22 @@
+:root {
+  --input-background-color: oklch(21% 0.006 285.885 / 0.5);
+  --input-text-color: oklch(98.5% 0 0);
+  --input-border-focused-color: oklch(37% 0.013 285.805 / 0.75);
+}
+
+.input {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  background: var(--input-background-color);
+  color: var(--input-text-color);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  outline-style: none;
+
+  &[data-focus] {
+    border: 1px solid var(--input-border-focused-color);
+  }
+}

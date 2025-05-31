@@ -1,0 +1,36 @@
+:root {
+  --select-background-color: oklch(21% 0.006 285.885 / 0.5);
+  --select-text-color: oklch(98.5% 0 0);
+  --select-border-focused-color: oklch(37% 0.013 285.805 / 0.75);
+}
+
+.wrapper {
+  position: relative;
+}
+
+.select {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  background: var(--select-background-color);
+  color: var(--select-text-color);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  outline-style: none;
+  appearance: none;
+
+  &[data-focus] {
+    border: 1px solid var(--select-border-focused-color);
+  }
+}
+
+.icon {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
