@@ -1,0 +1,57 @@
+:root {
+  --card-text-color: oklch(98.5% 0 0);
+  --card-background-hovered-color: oklch(37% 0.013 285.805 / 0.5);
+  --card-selected-background-color: oklch(44.2% 0.017 285.786 / 0.4);
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  font: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  letter-spacing: inherit;
+  outline-style: none;
+  background: transparent;
+  color: var(--card-text-color);
+  border-style: none;
+  outline: none;
+
+  &:hover {
+    background: var(--card-background-hovered-color);
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
+.selected {
+  background: var(--card-selected-background-color) !important;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-weight: 500;
+  text-align: start;
+}
+
+.position {
+  font-size: 0.75rem;
+  text-align: start;
+}
+
+.color {
+  flex: 0 0 auto;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--border-color);
+}

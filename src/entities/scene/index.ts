@@ -4,6 +4,7 @@ export { getRandomPosition } from './utilities/get-random-position';
 export { Ground } from './ui/ground';
 export { Camera } from './ui/camera';
 export { Primitives } from './ui/primitives';
+export { PrimitivesGroup } from './ui/primitives-group';
 export type { Position } from './types/position';
 export type {
   PrimitiveType,
