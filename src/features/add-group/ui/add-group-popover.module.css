@@ -1,0 +1,44 @@
+:root {
+  --popover-panel-background-color: oklch(27.4% 0.006 286.033 / 0.75);
+}
+
+.popover {
+  position: relative;
+}
+
+.panel {
+  border-radius: 0.75rem;
+  background: var(--popover-panel-background-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  width: 16rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  backdrop-filter: blur(0.5rem);
+}
+
+.heading {
+  font-weight: 500;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: minmax(auto, max-content) minmax(0, 1fr);
+  row-gap: 0.5rem;
+  column-gap: 0.75rem;
+  align-items: center;
+
+  & > label {
+    font-size: 0.875rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+
+  & * {
+    width: 100%;
+  }
+}
